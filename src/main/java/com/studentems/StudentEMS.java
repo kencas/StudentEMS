@@ -1,6 +1,8 @@
 package com.studentems;
 
 import com.studentems.models.Course;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author STM Developer
@@ -14,10 +16,27 @@ public class StudentEMS {
         Course course2 = new Course();
         Course course3 = new Course();
         Course course4 = new Course();
-        course1.createClassObj();
-        course2.createClassObj();
+        //course1.createClassObj();
+        //course2.createClassObj();
         
-        System.out.println(course3.getClassNaming());
-        System.out.println(course4.getGrading(50));
+        //System.out.println(course3.getClassNaming());
+        //System.out.println(course4.getGrading(50));
+        double[] studentScores = new double[2];//Array is defined before Assignment
+        
+        studentScores[0]= 2.5;
+        studentScores[1]= 4.5;
+        //studentScores[2]= 3.5;
+        System.out.println(course4.getGrading(15));
+        System.out.println(course4.computeScores(studentScores));
+        
+        List<Double> stdScores = new ArrayList<Double>();
+        stdScores.add(4.5);
+        stdScores.add(4.5);
+        stdScores.add(4.5);
+        stdScores.add(4.5);
+        stdScores.add(4.5);
+        stdScores.add(4.5);
+        
+        System.out.println(course4.computeScores(stdScores));
     }
 }
