@@ -87,6 +87,7 @@ public class Course {
         return computedScores;
     }
     
+    
     //TODO: Create another Method to take the Array of scores, Take the Student Name and Print the student name alongside the computed scores.
     //To Learn: StringBuffer in Java and how to append NewLine to a string
     //EG Student Name: Kene
@@ -102,6 +103,16 @@ public class Course {
         }
         
         return computedScores;
+    }
+    public String studentName(List<String> name)
+    {
+        String studentName = "";
+        for(int i = 0; i < name.size(); i++)
+        {
+           studentName = name.get(i);
+        }
+        return studentName;
+        
     }
     
     //TODO: Create another Method to take the List COllection of scores, Take the Student Name and Print the student name alongside the computed scores.

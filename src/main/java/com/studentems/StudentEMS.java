@@ -38,5 +38,21 @@ public class StudentEMS {
         stdScores.add(4.5);
         
         System.out.println(course4.computeScores(stdScores));
+        
+        List<String> stdNames = new ArrayList<String>();
+        
+        stdNames.add("Philip");
+        stdNames.add("Kate");
+        stdNames.add("Chike");
+        stdNames.add("Brown");
+        stdNames.add("Daniel");
+        stdNames.add("Jane");
+        
+        
+        for(int a = 0; a < stdNames.size() && a < stdScores.size(); a++)
+        {
+            System.out.println(stdNames.get(a) + " "+ stdScores.get(a));
+            
+        }
     }
 }
