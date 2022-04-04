@@ -6,8 +6,39 @@ import java.util.List;
  *
  * @author STM Developer
  */
-public class Course {
-    private int id;
+public class Course extends BaseModel {
+    private int id = 10;
+    private String tutor;
+    
+    public String checkList()
+    {
+        return "Checklist";
+    }
+    
+    @Override
+    public int getId()
+    {
+        return id + 10;
+    }
+    
+    @Override
+    void setId(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    public String getTutor(boolean canAccess)//Accessor
+    {
+        if(canAccess == true)
+            return tutor;
+        else
+            return "";
+    }
+    
+    public void setTutor(String tutor, boolean canSet) //Mutator
+    {
+        if(canSet)
+        this.tutor = tutor;
+    }
     
     public void createClassObj()//does not return a value
     {
@@ -104,15 +135,22 @@ public class Course {
         
         return computedScores;
     }
-    public String studentName(List<String> name)
+    public String studentName(String studentName, List<Double> scores)
     {
-        String studentName = "";
-        for(int i = 0; i < name.size(); i++)
+        //StringBuilder sb = new StringBuilder();
+        double totalScore = 0;
+        for(int i = 0; i < scores.size(); i++)
         {
-           studentName = name.get(i);
+           totalScore += scores.get(i);
         }
-        return studentName;
+        return "Student Name:" + studentName + " Scores: " + totalScore;
         
+    }
+    
+    public String studentName(String studentName, List<Double> scores, double basicPassScore)
+    {
+        //StringBuilder sb = new StringBuilder();
+        return "";        
     }
     
     //TODO: Create another Method to take the List COllection of scores, Take the Student Name and Print the student name alongside the computed scores.
@@ -121,4 +159,6 @@ public class Course {
     //Total Scores : 50
     
     //To Learn Map Collection - is a Key/Pair to map a Student ID to respective scores
+
+    
 }
