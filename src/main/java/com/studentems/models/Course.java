@@ -47,6 +47,7 @@ public class Course extends BaseModel {
     
     public String getClassNaming() //returns a value
     {
+        System.out.println("Course");
         return "Course";
     }
     
@@ -160,5 +161,10 @@ public class Course extends BaseModel {
     
     //To Learn Map Collection - is a Key/Pair to map a Student ID to respective scores
 
-    
+    @Override
+    public void doWork()
+    {
+      super.doWork();
+      System.out.println("Do work Sub class");
+    }
 }

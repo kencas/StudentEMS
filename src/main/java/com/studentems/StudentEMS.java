@@ -1,6 +1,7 @@
 package com.studentems;
 
 import com.studentems.models.Course;
+import com.studentems.models.CourseLoader;
 import com.studentems.models.Score;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +13,13 @@ public class StudentEMS {
 
     
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        //System.out.println("Hello World!");
         Course course1 = new Course(); //Instantiation / user-defined type
         Course course2 = new Course();
         Course course3 = new Course();
         Course course4 = new Course();
+        
+        CourseLoader loader = new CourseLoader();
         
         Score score = new Score();
         //course1.createClassObj();
@@ -44,10 +47,10 @@ public class StudentEMS {
         
         
         //System.out.println(course4.studentName("Chinonso",stdScores));
-        course4.setTutor("Chinonso", true);
+        //course4.setTutor("Chinonso", true);
         //System.out.println(course4.getTutor(true));
-        System.out.println(course4.getId());
-        System.out.println(score.getId());
+        //System.out.println(course4.getId());
+        //System.out.println(score.getId());
 //        List<String> stdNames = new ArrayList<String>();
 //        
 //        stdNames.add("Philip");
@@ -63,5 +66,8 @@ public class StudentEMS {
 //            System.out.println(stdNames.get(a) + " "+ stdScores.get(a));
 //            
 //        }
+
+course4.doWork();
+//loader.getClassNaming();
     }
 }
